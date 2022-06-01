@@ -13,6 +13,7 @@ namespace Mastermindtest
         Blue, 
         Black, 
         White, 
-        Yellow
+        Yellow,
+        None
     }
 }

@@ -15,5 +15,10 @@ namespace Mastermindtest
             this.colour = colour;
         }
 
+        public Ball()
+        {  
+           
+        }
+
     }
 }
