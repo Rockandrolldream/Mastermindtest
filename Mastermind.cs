@@ -15,18 +15,18 @@ namespace Mastermindtest
         // check on colours in input
         public string ShouldCheckIfColoursIsCorrect(string[] colurinput, List<string> generatecolour)
         {
-            var outputrandomcolours = generatecolour;
-            string[] converttoarray = outputrandomcolours.ToArray();
+           // var outputrandomcolours = generatecolour;
+            string[] converttoarray = generatecolour.ToArray();
 
             try
             {
                 for (int i = 0; i < 4; i++)
                 {
-                    if (converttoarray[i] == colurinput[i] && colurinput.Contains(converttoarray[i]))
+                    if (converttoarray[i] == colurinput[i])
                     {
                         answer.Add("black");
                     }
-                    else if (converttoarray.Contains(colurinput[i]))
+                    else if (converttoarray[i] != colurinput[i] && converttoarray.Contains(colurinput[i]))
                     {
                         answer.Add("white");
                     }
@@ -57,7 +57,8 @@ namespace Mastermindtest
             for (int i = 0; i < count; i++)
             {
                 int index = random.Next(colurs.Length);
-                listoutput.Add(colurs[index]);
+                // listoutput.Add(colurs[index]);
+                listoutput.Add("Blue");
             }
             return listoutput;
         }
@@ -129,7 +130,6 @@ namespace Mastermindtest
             }
             catch (Exception e)
             {
-
                 Console.WriteLine(e.Message);
             }
         }
