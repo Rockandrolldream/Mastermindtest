@@ -15,7 +15,6 @@ namespace Mastermindtest
         // check on colours in input
         public string ShouldCheckIfColoursIsCorrect(string[] colurinput, List<string> generatecolour)
         {
-           // var outputrandomcolours = generatecolour;
             string[] converttoarray = generatecolour.ToArray();
 
             try

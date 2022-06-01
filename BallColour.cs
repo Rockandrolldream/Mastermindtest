@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Mastermindtest
 {
-    internal class Emnum
-    {
+    public enum BallColour
+    { 
+        Red, 
+        Green, 
+        Blue, 
+        Black, 
+        White, 
+        Yellow
     }
 }

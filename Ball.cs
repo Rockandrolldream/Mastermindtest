@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Mastermindtest
 {
-    internal class Ball
-    {
+    public class Ball
+    { 
+        public BallColour colour { get; set; }
+
+        public Ball(BallColour colour)
+        {
+            this.colour = colour;
+        }
+
     }
 }
