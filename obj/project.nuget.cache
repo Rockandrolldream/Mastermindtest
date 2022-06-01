@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "GVE+dys2mU4zaD+hCQDRC72ii0Si01hYkYP6h0CM8HyETcXBg0m62jBqMlM3xM192M2erL4ZnzdrbQ97mIQQ6Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\KOM\\source\\repos\\MasterMind\\Mastermindtest\\Mastermindtest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\KOM\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\KOM\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\KOM\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
+    "C:\\Users\\KOM\\.nuget\\packages\\nunit3testadapter\\4.2.1\\nunit3testadapter.4.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}
