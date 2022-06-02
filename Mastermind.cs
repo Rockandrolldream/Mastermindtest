@@ -16,33 +16,33 @@ namespace Mastermindtest
         public string ShouldCheckIfColoursIsCorrect(List<Ball> inputformastermind, List<Ball> generatecolour)
         {
             Ball[] converttoarray = generatecolour.ToArray();
+            Ball[] inputarray = inputformastermind.ToArray();
+            string[] generateinputarray = new string[3];
+            string[] userinputarray = new string[3];
+            List<string> generateinput = new List<string>();
+            List<string> userinput = new List<string>();
 
-            try
+            for (int i = 0; i < 4; i++)
             {
-                for (int i = 0; i < 4; i++)
+                generateinput.Add(converttoarray[i].colour.ToString());
+                generateinputarray = generateinput.ToArray();
+                userinput.Add(inputarray[i].colour.ToString());
+                userinputarray = userinput.ToArray();
+            }
+
+                for (int i = 0; i < 4; i++) 
                 {
-                    if (converttoarray[i] == inputformastermind[i])
+                    if (generateinputarray[i] == userinputarray[i])
                     {
                         answer.Add("black");
                     }
-                    else if (converttoarray[i] != inputformastermind[i] && converttoarray.Contains(inputformastermind[i]))
+                    else if (generateinputarray[i] != userinputarray[i] && generateinputarray.Contains(userinputarray[i]))
                     {
                         answer.Add("white");
                     }
                 }
-            }
-            catch (IndexOutOfRangeException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            var result = string.Join(",", answer.ToArray());
-            switch (result)
-            {
-                case "black,black,black,black":
-                    Console.WriteLine("You have won");
-                    AskIfYouWantToTryAgain();
-                    break;
-            }
+              
+            var result = string.Join(",", answer.ToArray());            
             return result;
         }
         // Create Randomcolour
@@ -58,7 +58,6 @@ namespace Mastermindtest
             {
                 int index = random.Next(colurs.Length);
                 listoutput.Add(colurs[index]);
-                // listoutput.Add("Blue");
             }
             return listoutput;
         }
@@ -99,19 +98,16 @@ namespace Mastermindtest
                     Excecutegame(generatecolour);
                     answer.Clear();
                 }             
-                try
-                {
+  
                     Console.WriteLine("Sorry, but you didn't find the correct solution within the needed number of chances.");
-                    var result = string.Join(",", generatecolour.ToList());
-                    Console.WriteLine(result);
+                //  var result = string.Join(",", generatecolour.ToString()); 
+
+                foreach (var item in generatecolour)
+                {
+                    Console.WriteLine(item.colour);
+                }
                     Console.WriteLine("Would you like to try another round");
                     AskIfYouWantToTryAgain();
-                }
-                catch (Exception e)
-                {
-
-                    Console.WriteLine(e.Message);
-                }
             }
             Console.WriteLine("Thank you for using the Game.");
             Console.ReadKey();
